@@ -44,7 +44,7 @@ export function SiteFooter() {
           <p>
             © {new Date().getFullYear()} {company.name}. All rights reserved.
           </p>
-          <p>{company.brand} · Malang, East Java, Indonesia</p>
+          <p>{company.brand} — grown in Malang, East Java, Indonesia</p>
         </div>
       </div>
     </footer>
