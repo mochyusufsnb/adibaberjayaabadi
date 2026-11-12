@@ -49,9 +49,14 @@ export function SiteHeader() {
 
         <div className="hidden lg:block">
           <Button asChild variant="forest" size="lg">
-            <Link to="/products" hash="specifications">
-              Product Specs
-            </Link>
+            <a
+              href={contact.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Chat with ${company.name} on WhatsApp at ${contact.display}`}
+            >
+              <MessageCircle /> WhatsApp
+            </a>
           </Button>
         </div>
 

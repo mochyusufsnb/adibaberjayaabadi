@@ -22,6 +22,15 @@ describe("company data", () => {
     expect(totalCultivationArea).toBe(610);
   });
 
+  it("uses WhatsApp with the supplied display number", () => {
+    expect(contact.channel).toBe("WhatsApp");
+    expect(contact.display).toBe("+62 823 8086 1495");
+  });
+
+  it("opens the supplied WhatsApp number in international format", () => {
+    expect(contact.href).toMatch(/^https:\/\/wa\.me\/6282380861495\?/);
+  });
+
   it("never includes the incorrect website or contact details from the profile", () => {
     const banned = [/niagaglobal/i, /812-3746-8797/, /896-7882-1412/, /sumber niaga/i];
     for (const file of sourceFiles(join(process.cwd(), "src"))) {

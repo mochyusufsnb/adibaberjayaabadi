@@ -8,7 +8,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-forest-deep text-cream">
       <div className="container-site grid gap-12 py-16 md:grid-cols-12 md:py-20">
-        <div className="md:col-span-5">
+        <div className="md:col-span-6 lg:col-span-4">
           <div className="inline-block rounded-2xl bg-cream px-5 py-4">
             <Logo className="w-48" />
           </div>
