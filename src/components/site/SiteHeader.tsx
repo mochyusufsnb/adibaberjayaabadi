@@ -30,7 +30,7 @@ export function SiteHeader() {
         )}
       >
         <Link to="/" aria-label="PT Adiba Berjaya Abadi — home" className="flex items-center">
-          <Logo className="w-[7.5rem] md:w-[8.75rem]" />
+          <Logo className="w-[8rem] md:w-[9.5rem]" />
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">

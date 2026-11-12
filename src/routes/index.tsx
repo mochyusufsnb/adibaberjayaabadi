@@ -81,7 +81,7 @@ function HomePage() {
         <div className="absolute inset-0 -z-10 bg-bottom-overlay" aria-hidden />
 
         <div className="container-site flex flex-1 items-center pb-16 pt-32 md:pt-36">
-          <div className="max-w-2xl animate-rise">
+          <div className="max-w-3xl animate-rise">
             <p className="eyebrow flex items-center gap-3 text-gold">
               <span className="h-px w-8 bg-gold/60" aria-hidden />
               {company.brand} · Malang, Indonesia
