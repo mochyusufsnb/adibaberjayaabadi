@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Verified company facts live in `src/data/company.ts` and image references in `src/data/images.ts`; pages read from there so copy stays consistent and auditable against the company profile.
+- Shared site chrome (header, footer, CTA, section heading) lives in `src/components/site/`; each content section is its own route for SEO.
+- `src/test/company-data.test.ts` guards against the excluded website/contact details reappearing in source.
