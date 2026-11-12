@@ -82,7 +82,7 @@ function GalleryPage() {
           ))}
         </div>
 
-        <ul className="mt-10 grid auto-rows-[200px] grid-cols-2 gap-4 md:auto-rows-[240px] md:grid-cols-3 lg:grid-cols-4">
+        <ul className="mt-10 grid grid-flow-dense auto-rows-[200px] grid-cols-2 gap-4 md:auto-rows-[240px] md:grid-cols-3 lg:grid-cols-4">
           {shown.map((item) => (
             <li
               key={item.img.src}
