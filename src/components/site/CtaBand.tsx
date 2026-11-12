@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { company, contact } from "@/data/company";
 import { photos } from "@/data/images";
 
 /** Business partnership call-to-action. */

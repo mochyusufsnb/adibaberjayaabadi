@@ -1,9 +1,9 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { navItems } from "@/data/company";
+import { company, contact, navItems } from "@/data/company";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
 

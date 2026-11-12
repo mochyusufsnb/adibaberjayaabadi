@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { cultivationArea, totalCultivationArea, totalOutsideMalang } from "@/data/company";
+import { contact, cultivationArea, totalCultivationArea, totalOutsideMalang } from "@/data/company";
 
 function sourceFiles(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {

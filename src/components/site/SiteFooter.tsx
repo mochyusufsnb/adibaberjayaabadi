@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
+import { MessageCircle } from "lucide-react";
 
-import { company, navItems } from "@/data/company";
+import { company, contact, navItems } from "@/data/company";
 import { Logo } from "./Logo";
 
 export function SiteFooter() {
