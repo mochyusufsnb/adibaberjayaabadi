@@ -110,7 +110,7 @@ function ProductsPage() {
               </div>
             </div>
             <div className="lg:col-span-8">
-              <Tabs defaultValue={specifications[0].title}>
+              <Tabs defaultValue={specifications[0]?.title}>
                 <TabsList className="flex h-auto w-full flex-wrap justify-start gap-1 rounded-2xl bg-cream-deep p-1.5">
                   {specifications.map((g) => (
                     <TabsTrigger

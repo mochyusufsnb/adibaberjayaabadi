@@ -182,7 +182,7 @@ function QualityPage() {
           <SectionHeading eyebrow="Market Segments" title="Who we supply" align="center" />
           <ul className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-5">
             {company.marketSegments.map((m, i) => {
-              const Icon = segmentIcons[i];
+              const Icon = segmentIcons[i] ?? Store;
               return (
                 <Reveal as="li" key={m} delay={i * 50}>
                   <div className="flex h-full flex-col items-center gap-4 rounded-2xl border border-border bg-card px-4 py-8 text-center shadow-card">
