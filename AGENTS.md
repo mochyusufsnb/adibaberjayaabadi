@@ -34,3 +34,4 @@ use the editor.
 - Verified company facts live in `src/data/company.ts` and image references in `src/data/images.ts`; pages read from there so copy stays consistent and auditable against the company profile.
 - Shared site chrome (header, footer, CTA, section heading) lives in `src/components/site/`; each content section is its own route for SEO.
 - `src/test/company-data.test.ts` guards against the excluded website/contact details reappearing in source.
+- Client UI dependencies are listed in `optimizeDeps.include` in `vite.config.ts`; add new ones there so the dev preview never re-optimizes mid-session and loads duplicate React.
