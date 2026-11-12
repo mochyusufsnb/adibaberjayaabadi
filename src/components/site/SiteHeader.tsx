@@ -93,9 +93,14 @@ export function SiteHeader() {
             ))}
           </ul>
           <Button asChild variant="forest" size="xl" className="mt-2 w-full">
-            <Link to="/products" hash="specifications">
-              Product Specifications
-            </Link>
+            <a
+              href={contact.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Chat with ${company.name} on WhatsApp at ${contact.display}`}
+            >
+              <MessageCircle /> Chat on WhatsApp
+            </a>
           </Button>
         </nav>
       )}

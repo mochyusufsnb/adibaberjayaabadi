@@ -18,7 +18,7 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <nav aria-label="Footer" className="md:col-span-3">
+        <nav aria-label="Footer" className="md:col-span-6 lg:col-span-2">
           <p className="eyebrow text-gold">Explore</p>
           <ul className="mt-5 space-y-3 text-sm">
             {navItems.map((item) => (
