@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { company, contact } from "@/data/company";
 import { photos } from "@/data/images";
 
 /** Business partnership call-to-action. */
@@ -27,17 +28,23 @@ export function CtaBand() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-cream/75 md:text-lg">
             We work with fruit distributors, supermarkets, HoReCa, the food &amp; beverage industry and
-            export buyers. Review our product specifications and quality approach to see how Pameling
-            fits your supply programme.
+            export buyers. Contact us directly on WhatsApp to discuss your product and supply needs.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button asChild variant="hero" size="xl">
+              <a
+                href={contact.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Chat with ${company.name} on WhatsApp at ${contact.display}`}
+              >
+                <MessageCircle /> Chat on WhatsApp
+              </a>
+            </Button>
+            <Button asChild variant="heroOutline" size="xl">
               <Link to="/products" hash="specifications">
                 View Specifications <ArrowRight />
               </Link>
-            </Button>
-            <Button asChild variant="heroOutline" size="xl">
-              <Link to="/quality">Quality &amp; Export</Link>
             </Button>
           </div>
         </div>

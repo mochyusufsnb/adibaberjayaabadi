@@ -1,9 +1,9 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { navItems } from "@/data/company";
+import { company, contact, navItems } from "@/data/company";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
 
@@ -49,9 +49,14 @@ export function SiteHeader() {
 
         <div className="hidden lg:block">
           <Button asChild variant="forest" size="lg">
-            <Link to="/products" hash="specifications">
-              Product Specs
-            </Link>
+            <a
+              href={contact.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Chat with ${company.name} on WhatsApp at ${contact.display}`}
+            >
+              <MessageCircle /> WhatsApp
+            </a>
           </Button>
         </div>
 
@@ -88,9 +93,14 @@ export function SiteHeader() {
             ))}
           </ul>
           <Button asChild variant="forest" size="xl" className="mt-2 w-full">
-            <Link to="/products" hash="specifications">
-              Product Specifications
-            </Link>
+            <a
+              href={contact.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Chat with ${company.name} on WhatsApp at ${contact.display}`}
+            >
+              <MessageCircle /> Chat on WhatsApp
+            </a>
           </Button>
         </nav>
       )}

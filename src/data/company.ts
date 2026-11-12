@@ -36,6 +36,12 @@ export const company = {
   ],
 } as const;
 
+export const contact = {
+  channel: "WhatsApp",
+  display: "+62 823 8086 1495",
+  href: "https://wa.me/6282380861495?text=Hello%20PT%20Adiba%20Berjaya%20Abadi%2C%20I%27m%20interested%20in%20Pameling%20avocados",
+} as const;
+
 export const qualityPillars = [
   {
     key: "qc",

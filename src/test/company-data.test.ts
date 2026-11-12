@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { cultivationArea, totalCultivationArea, totalOutsideMalang } from "@/data/company";
+import { contact, cultivationArea, totalCultivationArea, totalOutsideMalang } from "@/data/company";
 
 function sourceFiles(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {
@@ -20,6 +20,15 @@ describe("company data", () => {
   it("cultivation area outside Malang totals 250 ha and overall 610 ha", () => {
     expect(totalOutsideMalang).toBe(250);
     expect(totalCultivationArea).toBe(610);
+  });
+
+  it("uses WhatsApp with the supplied display number", () => {
+    expect(contact.channel).toBe("WhatsApp");
+    expect(contact.display).toBe("+62 823 8086 1495");
+  });
+
+  it("opens the supplied WhatsApp number in international format", () => {
+    expect(contact.href).toMatch(/^https:\/\/wa\.me\/6282380861495\?/);
   });
 
   it("never includes the incorrect website or contact details from the profile", () => {
