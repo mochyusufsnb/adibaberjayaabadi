@@ -36,3 +36,4 @@ use the editor.
 - `src/test/company-data.test.ts` guards against the excluded website/contact details reappearing in source.
 - Client UI dependencies are listed in `optimizeDeps.include` in `vite.config.ts`; add new ones there so the dev preview never re-optimizes mid-session and loads duplicate React.
 - All site images (logo included) are bundled from `src/assets/` via imports, never `lovable-assets` pointers, because the site is also deployed to hosts like Vercel where `/__l5e/` URLs do not exist.
+- `vite.config.ts` sets `nitro: { preset: "node-server" }` so a plain `vite build` on a normal machine produces a Node-runnable server; Lovable's own build overrides that preset, so preview and publish still target its hosting.
