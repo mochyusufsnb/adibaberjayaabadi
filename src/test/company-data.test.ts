@@ -38,4 +38,11 @@ describe("company data", () => {
       for (const re of banned) expect(text, `${file} contains ${re}`).not.toMatch(re);
     }
   });
+
+  it("bundles every image locally so the site works on any host (Vercel, Netlify, etc.)", () => {
+    for (const file of sourceFiles(join(process.cwd(), "src"))) {
+      const text = readFileSync(file, "utf8");
+      expect(text, `${file} references Lovable-only asset hosting`).not.toMatch(/__l5e|\.asset\.json/);
+    }
+  });
 });
