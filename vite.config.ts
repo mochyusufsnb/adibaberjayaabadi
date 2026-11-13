@@ -15,6 +15,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Local `vite build` outside Lovable targets plain Node (`.output/server/index.mjs`).
+  // Lovable's own build overrides this to its Cloudflare target, so preview/publish are unaffected.
+  nitro: { preset: "node-server" },
   vite: {
     // Pre-bundle UI deps up front: on-the-fly discovery re-optimizes mid-session and can load two
     // React copies ("Cannot read properties of null (reading 'useState')").
