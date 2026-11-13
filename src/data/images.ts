@@ -1,6 +1,6 @@
 import heroOrchard from "@/assets/hero-avocado-orchard.jpg";
-import logoFull from "@/assets/images/logo-full.png.asset.json";
-import logoEmblem from "@/assets/images/logo-emblem.png.asset.json";
+import logoFull from "@/assets/images/logo-full.png";
+import logoEmblem from "@/assets/images/logo-emblem.png";
 import plantationAerial from "@/assets/images/plantation-aerial-hd.jpg";
 import nursery from "@/assets/images/nursery-hd.jpg";
 import inHand from "@/assets/images/pameling-in-hand-hd.jpg";
@@ -18,8 +18,8 @@ import oil from "@/assets/images/avocado-oil-hd.jpg";
 
 /** Official PT Adiba Berjaya Abadi logo (the only authorised logo). */
 export const logo = {
-  full: { src: logoFull.url, width: 900, height: 429 },
-  emblem: { src: logoEmblem.url, width: 600, height: 212 },
+  full: { src: logoFull, width: 900, height: 429 },
+  emblem: { src: logoEmblem, width: 600, height: 212 },
 };
 
 /** Generated atmospheric image — not a photo of company property. */
